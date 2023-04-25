@@ -2,7 +2,7 @@ import { memo } from 'react';
 
 const MainPage = memo(() => {
     return (
-        <div>
+        <div data-testid='MainPage'>
             MainPage
         </div>
     );
