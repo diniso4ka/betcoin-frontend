@@ -1,6 +1,6 @@
 import { memo, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { routerConfig } from 'shared/config/routeConfig/routeConfig';
+import { routerConfig } from '@/shared/config/routeConfig/routeConfig';
 
 export const AppRouter = memo(() => {
     

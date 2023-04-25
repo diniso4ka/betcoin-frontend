@@ -4,6 +4,11 @@
         "noImplicitAny": true,
         "module": "ESNext",
         "target": "es5",
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
         "jsx": "react-jsx",
         "allowJs": true,
         "strict": true,
@@ -12,8 +17,9 @@
         "allowSyntheticDefaultImports": true,
         "baseUrl": ".",
         "paths": {
-            "*": ["./src/*"],
+            "@/*": ["./src/*"]
         },
+        "isolatedModules": true
     },
     "ts-node": {
         "compilerOptions": {
@@ -23,6 +29,6 @@
     "include": [
         "./config/jest/setupTests.ts",
         "./src/**/*.ts",
-        "./src/**/*.tsx",
+        "./src/**/*.tsx"
     ]
 }
