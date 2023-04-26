@@ -16,16 +16,16 @@ function isAbsolute(value: string) {
         'pages',
         'widgets',
     ];
-    
+
     return layers.some((layer) => value.startsWith(layer));
 }
 
 files.forEach((sourceFile) => {
     const importDeclarations = sourceFile.getImportDeclarations();
-    
+
     importDeclarations.forEach((importDeclaration) => {
         const value = importDeclaration.getModuleSpecifierValue();
-        
+
         if (isAbsolute(value)) {
             importDeclaration.setModuleSpecifier(`@/${value}`);
         }
