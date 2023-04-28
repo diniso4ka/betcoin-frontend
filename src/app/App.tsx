@@ -1,10 +1,6 @@
-import { AppRouter } from './providers/router';
 import './styles/index.scss';
 
 export const App = () => {
-    return (
-        <div className='app'>
-            <AppRouter />
-        </div>
-    );
+    // eslint-disable-next-line i18next/no-literal-string
+    return <div className='app'>App</div>;
 };
