@@ -144,5 +144,6 @@ module.exports = {
                 ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
             },
         ],
+        '@typescript-eslint/no-non-null-assertion': 'off',
     },
 };
