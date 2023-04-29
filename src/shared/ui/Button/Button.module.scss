@@ -1,0 +1,40 @@
+.Button {
+    margin: 0;
+    padding: 8px 20px;
+    transition: opacity 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.clear {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+.primary {
+    border-radius: 10px;
+    color: #fff;
+    background-color: #555;
+}
+
+.blue {
+    border-radius: 10px;
+    color: #fff;
+    background-color: #5f9ea0ff;
+}
+
+.size_s {
+    font-size: 10px;
+}
+
+.size_m {
+    font-size: 14px;
+}
+
+.size_l {
+    font-size: 18px;
+}
+
+.disabled {
+    opacity: 0.3;
+}
