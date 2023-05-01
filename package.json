@@ -24,6 +24,7 @@
     },
     "lint-staged": {
         "**/*.{ts,tsx}": [
+            "prettier --list-different",
             "eslint"
         ],
         "**/*.scss": "npx stylelint"

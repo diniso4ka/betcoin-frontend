@@ -51,7 +51,6 @@ export const ButtonComponent: FC<ButtonProps> = (props) => {
             onClick={handleButtonClick}
             className={classnames}
             disabled={disabled}
-            data-testid='Button'
             {...props}
         >
             {children}
