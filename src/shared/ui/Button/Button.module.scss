@@ -1,40 +1,125 @@
 .Button {
-    margin: 0;
-    padding: 8px 20px;
-    transition: opacity 0.2s ease-in-out;
+    transition: background-color var(--animation-delay) ease-in-out;
     cursor: pointer;
 }
 
-.clear {
-    border: none;
-    padding: 0;
-    background-color: transparent;
+.BUTTON_SIZE_L {
+    height: 56px;
+    font-size: var(--font-size-h4);
+
+    &_BUTTON_SIZE_XL {
+        width: 180px;
+    }
+
+    &_BUTTON_SIZE_L {
+        width: 135px;
+    }
+
+    &_BUTTON_SIZE_M {
+        width: 90px;
+    }
+
+    &_BUTTON_SIZE_S {
+        width: 56px;
+    }
 }
 
-.primary {
-    border-radius: 10px;
-    color: #fff;
-    background-color: #555;
+.BUTTON_SIZE_M {
+    height: 48px;
+    font-size: var(--font-size-p1);
+
+    &_BUTTON_SIZE_XL {
+        width: 171px;
+    }
+
+    &_BUTTON_SIZE_L {
+        width: 128px;
+    }
+
+    &_BUTTON_SIZE_M {
+        width: 85px;
+    }
+
+    &_BUTTON_SIZE_S {
+        width: 48px;
+    }
 }
 
-.blue {
-    border-radius: 10px;
-    color: #fff;
-    background-color: #5f9ea0ff;
+.BUTTON_SIZE_S {
+    height: 36px;
+    font-size: var(--font-size-p3);
+
+    &_BUTTON_SIZE_XL {
+        width: 161px;
+    }
+
+    &_BUTTON_SIZE_L {
+        width: 120px;
+    }
+
+    &_BUTTON_SIZE_M {
+        width: 80px;
+    }
+
+    &_BUTTON_SIZE_S {
+        width: 36px;
+    }
 }
 
-.size_s {
-    font-size: 10px;
+.BUTTON_THEME {
+    &_GREEN {
+        color: var(--white-color);
+        background-color: var(--ligth-green-color);
+
+        &:hover {
+            background-color: var(--ligth-green-hover-color);
+        }
+    }
+
+    &_RED {
+        color: var(--white-color);
+        background-color: var(--ligth-red-color);
+
+        &:hover {
+            background-color: var(--ligth-red-hover-color);
+        }
+    }
+
+    &_BLUE {
+        color: var(--white-color);
+        background-color: var(--dark-blue-color);
+
+        &:hover {
+            background-color: var(--dark-blue-hover-color);
+        }
+    }
+
+    &_GRAY {
+        color: var(--white-color);
+        background-color: var(--dark-gray-color);
+
+        &:hover {
+            background-color: var(--dark-gray-hover-color);
+        }
+    }
 }
 
-.size_m {
-    font-size: 14px;
-}
+.BUTTON_TYPE {
+    &_SQUARE {
+        border-radius: 12px;
+    }
 
-.size_l {
-    font-size: 18px;
+    &_CIRCLE {
+        border-radius: 15px;
+    }
 }
 
 .disabled {
-    opacity: 0.3;
+    color: var(--button-disable-text-color);
+    background-color: var(--button-disable-bg-color);
+    cursor: default;
+    
+    &:hover {
+        background-color: var(--button-disable-bg-color);
+    }
 }
