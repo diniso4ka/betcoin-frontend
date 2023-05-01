@@ -1,4 +1,5 @@
 import { Story } from '@storybook/react';
+
 // eslint-disable-next-line opmind-plugin/layer-imports
 import '@/app/styles/index.scss';
 

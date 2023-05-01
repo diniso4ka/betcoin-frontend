@@ -8,4 +8,5 @@ export type ButtonWidth = 'WIDTH_S' | 'WIDTH_M' | 'WIDTH_L' | 'WIDTH_XL';
 
 export type ButtonSize = 'SIZE_S' | 'SIZE_M' | 'SIZE_L';
 
+// TODO global var radius + rename
 export type ButtonType = 'TYPE_CIRCLE' | 'TYPE_SQUARE';
