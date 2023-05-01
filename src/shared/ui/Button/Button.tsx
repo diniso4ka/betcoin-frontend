@@ -19,10 +19,10 @@ export const ButtonComponent: FC<ButtonProps> = (props) => {
     const {
         className,
         children,
-        theme = 'BUTTON_THEME_GREEN',
-        size = 'BUTTON_SIZE_M',
-        width = 'BUTTON_SIZE_M',
-        buttonType = 'BUTTON_TYPE_SQUARE',
+        theme = 'THEME_GREEN',
+        size = 'SIZE_M',
+        width = 'WIDTH_M',
+        buttonType = 'TYPE_SQUARE',
         disabled,
         onClick,
     } = props;

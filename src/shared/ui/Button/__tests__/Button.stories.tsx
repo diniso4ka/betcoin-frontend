@@ -17,9 +17,9 @@ type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
     args: {
-        theme: 'BUTTON_THEME_GREEN',
-        size: 'BUTTON_SIZE_L',
-        width: 'BUTTON_SIZE_M',
+        theme: 'THEME_GREEN',
+        size: 'SIZE_L',
+        width: 'WIDTH_M',
         children: 'Test',
     },
 };

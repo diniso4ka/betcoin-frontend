@@ -3,70 +3,70 @@
     cursor: pointer;
 }
 
-.BUTTON_SIZE_L {
+.SIZE_L {
     height: 56px;
     font-size: var(--font-size-h4);
 
-    &_BUTTON_SIZE_XL {
+    &_WIDTH_XL {
         width: 180px;
     }
 
-    &_BUTTON_SIZE_L {
+    &_WIDTH_L {
         width: 135px;
     }
 
-    &_BUTTON_SIZE_M {
+    &_WIDTH_M {
         width: 90px;
     }
 
-    &_BUTTON_SIZE_S {
+    &_WIDTH_S {
         width: 56px;
     }
 }
 
-.BUTTON_SIZE_M {
+.SIZE_M {
     height: 48px;
     font-size: var(--font-size-p1);
 
-    &_BUTTON_SIZE_XL {
+    &_WIDTH_XL {
         width: 171px;
     }
 
-    &_BUTTON_SIZE_L {
+    &_WIDTH_L {
         width: 128px;
     }
 
-    &_BUTTON_SIZE_M {
+    &_WIDTH_M {
         width: 85px;
     }
 
-    &_BUTTON_SIZE_S {
+    &_WIDTH_S {
         width: 48px;
     }
 }
 
-.BUTTON_SIZE_S {
+.SIZE_S {
     height: 36px;
     font-size: var(--font-size-p3);
 
-    &_BUTTON_SIZE_XL {
+    &_WIDTH_XL {
         width: 161px;
     }
 
-    &_BUTTON_SIZE_L {
+    &_WIDTH_L {
         width: 120px;
     }
 
-    &_BUTTON_SIZE_M {
+    &_WIDTH_M {
         width: 80px;
     }
 
-    &_BUTTON_SIZE_S {
+    &_WIDTH_S {
         width: 36px;
     }
 }
 
-.BUTTON_THEME {
+.THEME {
     &_GREEN {
         color: var(--white-color);
         background-color: var(--ligth-green-color);
@@ -104,7 +104,7 @@
     }
 }
 
-.BUTTON_TYPE {
+.TYPE {
     &_SQUARE {
         border-radius: 12px;
     }
