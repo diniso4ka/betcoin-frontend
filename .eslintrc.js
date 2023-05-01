@@ -58,6 +58,12 @@ module.exports = {
         'opmind-plugin',
     ],
     rules: {
+        'prettier/prettier': [
+            'error',
+            {
+                endOfLine: 'auto',
+            },
+        ],
         semi: ['error', 'always'],
         indent: ['error', 4],
         'max-len': [
@@ -82,25 +88,23 @@ module.exports = {
             'error',
             {
                 groups: [
-                    [
-                        //Absolute imports (path from 'path')
-                        '^\\w+$',
-                        // Packages. `react` related packages come first.
-                        '^react',
-                        '^@?\\w',
-                        // Internal packages.
-                        '(app|pages|widgets|entities|shared)(/.*|$)',
-                        // Side effect imports.
-                        '^\\u0000',
-                        // Parent imports. Put `..` last.
-                        '^\\.\\.(?!/?$)',
-                        '^\\.\\./?$',
-                        '^\\.(?!/?$)',
-                        // Assets
-                        '^shared\\/assets.+',
-                        // Styles.
-                        '^.+\\.s?css$',
-                    ],
+                    //Absolute imports (path from 'path')
+                    ['^\\w+$'],
+                    // Packages. `react` related packages come first.
+                    ['^react'],
+                    ['^@?\\w'],
+                    // Internal packages.
+                    ['(app|pages|widgets|entities|shared)(/.*|$)'],
+                    // Side effect imports.
+                    ['^\\u0000'],
+                    // Parent imports. Put `..` last.
+                    ['^\\.\\.(?!/?$)'],
+                    ['^\\.\\./?$'],
+                    ['^\\.(?!/?$)'],
+                    // Assets
+                    ['^shared\\/assets.+'],
+                    // Styles.
+                    ['^.+\\.s?css$'],
                 ],
             },
         ],

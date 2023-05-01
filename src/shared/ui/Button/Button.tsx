@@ -1,36 +1,61 @@
 import cn from 'classnames';
-import { ButtonHTMLAttributes, memo, ReactNode } from 'react';
+import { ButtonHTMLAttributes, FC, memo, MouseEvent, ReactNode } from 'react';
+
+import { ButtonSize, ButtonTheme, ButtonType, ButtonWidth } from './types';
+
 import s from './Button.module.scss';
-
-export type ButtonTheme = 'clear' | 'primary' | 'blue';
-
-export type ButtonSize = 'size_s' | 'size_m' | 'size_l';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
     className?: string;
+    disabled?: boolean;
     theme?: ButtonTheme;
     size?: ButtonSize;
-    disabled?: boolean;
+    width?: ButtonWidth;
+    buttonType?: ButtonType;
 }
 
-export const Button = memo(
-    ({
+export const ButtonComponent: FC<ButtonProps> = (props) => {
+    const {
         className,
         children,
-        theme = 'clear',
-        size = 'size_m',
+        theme = 'THEME_GREEN',
+        size = 'SIZE_M',
+        width = 'WIDTH_M',
+        buttonType = 'TYPE_SQUARE',
         disabled,
-        ...props
-    }: ButtonProps) => (
+        onClick,
+    } = props;
+
+    const handleButtonClick = (e: MouseEvent<HTMLButtonElement>) => {
+        e.stopPropagation();
+        e.preventDefault();
+        onClick?.(e);
+    };
+
+    const buttonWidthMap = `${size}_${width}`;
+    const classnames = cn(
+        s.Button,
+        className,
+        s[size],
+        s[buttonWidthMap],
+        s[buttonType],
+        s[theme],
+        {
+            [s.disabled]: disabled,
+        },
+    );
+
+    return (
         <button
-            className={cn(s.Button, className, s[size], s[theme], {
-                [s.disabled]: disabled,
-            })}
+            onClick={handleButtonClick}
+            className={classnames}
             disabled={disabled}
             {...props}
         >
             {children}
         </button>
-    ),
-);
+    );
+};
+
+export const Button = memo(ButtonComponent);
