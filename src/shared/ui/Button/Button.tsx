@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { ButtonHTMLAttributes, FC, memo, MouseEvent, ReactNode } from 'react';
+import { ButtonHTMLAttributes, memo, MouseEvent, ReactNode } from 'react';
 
 import { ButtonSize, ButtonTheme, ButtonType, ButtonWidth } from './types';
 
@@ -15,7 +15,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     buttonType?: ButtonType;
 }
 
-export const ButtonComponent: FC<ButtonProps> = (props) => {
+export const ButtonComponent = (props: ButtonProps) => {
     const {
         className,
         children,
@@ -25,6 +25,7 @@ export const ButtonComponent: FC<ButtonProps> = (props) => {
         buttonType = 'TYPE_SQUARE',
         disabled,
         onClick,
+        ...rest
     } = props;
 
     const handleButtonClick = (e: MouseEvent<HTMLButtonElement>) => {
@@ -51,7 +52,7 @@ export const ButtonComponent: FC<ButtonProps> = (props) => {
             onClick={handleButtonClick}
             className={classnames}
             disabled={disabled}
-            {...props}
+            {...rest}
         >
             {children}
         </button>

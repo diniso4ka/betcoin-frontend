@@ -1,6 +1,9 @@
 import type { Preview } from '@storybook/react';
 
-import '../../src/app/styles/index.scss';
+import { RouterDecorator } from '../../src/shared/config/storybook/RouterDecorator';
+import { SuspenseDecorator } from '../../src/shared/config/storybook/SuspenseDecorator';
+
+import '@/app/styles/index.scss';
 
 const preview: Preview = {
     parameters: {
@@ -13,6 +16,7 @@ const preview: Preview = {
         },
         layout: 'fullscreen',
     },
+    decorators: [RouterDecorator, SuspenseDecorator],
 };
 
 export default preview;
