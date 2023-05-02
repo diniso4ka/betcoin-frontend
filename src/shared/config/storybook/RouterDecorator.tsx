@@ -1,6 +1,8 @@
 import { BrowserRouter } from 'react-router-dom';
 
-export const RouterDecorator = (StoryComponent) => (
+import type { StoryFn } from '@storybook/react';
+
+export const RouterDecorator = (StoryComponent: StoryFn) => (
     <BrowserRouter>
         <StoryComponent />
     </BrowserRouter>
