@@ -1,4 +1,4 @@
-import babelRemovePropsPlugin from '../../babel/babelRemovePropsPlugin';
+// import babelRemovePropsPlugin from '../../babel/babelRemovePropsPlugin';
 import { BuildOptions } from '../types/config';
 
 interface BuildBabelLoaderProps extends BuildOptions {
@@ -22,12 +22,12 @@ export const buildBabelLoader = ({ isDev, isTSX }: BuildBabelLoaderProps) => {
                         },
                     ],
                     '@babel/plugin-transform-runtime',
-                    isTSX && !isDev && [
-                        babelRemovePropsPlugin,
-                        {
-                            props: ['data-testid'],
-                        },
-                    ],
+                    // isTSX && !isDev && [ TODO
+                    //     babelRemovePropsPlugin,
+                    //     {
+                    //         props: ['data-testid'],
+                    //     },
+                    // ],
                     isDev && require.resolve('react-refresh/babel'),
                 ].filter(Boolean),
             },
