@@ -7,6 +7,19 @@ import '@/app/styles/index.scss';
 
 const preview: Preview = {
     parameters: {
+        backgrounds: {
+            default: 'main',
+            values: [
+                {
+                    name: 'main',
+                    value: '#171721',
+                },
+                {
+                    name: 'test',
+                    value: '#fff',
+                },
+            ],
+        },
         actions: { argTypesRegex: '^on[A-Z].*' },
         controls: {
             matchers: {
@@ -14,7 +27,7 @@ const preview: Preview = {
                 date: /Date$/,
             },
         },
-        layout: 'fullscreen',
+        // layout: 'fullscreen',
     },
     decorators: [RouterDecorator, SuspenseDecorator],
 };
