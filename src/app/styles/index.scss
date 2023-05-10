@@ -2,3 +2,8 @@
 @import './variables/global';
 @import './variables/fonts';
 @import './variables/colors';
+
+body {
+    color: var(--white-color);
+    background-color: var(--bg-primary-color);
+}
