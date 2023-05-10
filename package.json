@@ -95,6 +95,7 @@
         "prettier": "^2.8.8",
         "react-refresh": "^0.14.0",
         "regenerator-runtime": "^0.13.11",
+        "resolve-url-loader": "^5.0.0",
         "sass": "^1.60.0",
         "sass-loader": "^13.2.1",
         "storybook": "^7.0.7",
