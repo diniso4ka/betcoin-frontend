@@ -1,0 +1,21 @@
+.link {
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.SIZE_M {
+    font-size: var(--font-size-p2);
+}
+
+.THEME {
+    &_WHITE {
+        color: var(--white-color);
+        transition: color ease-in-out var(--animation-delay);
+        
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--dark-blue-color);
+            }
+        }
+    }
+}
