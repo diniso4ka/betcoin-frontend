@@ -7,6 +7,7 @@ import { AppRoutesProps } from '@/shared/types/router';
 import { routerConfig } from '../config/routeConfig';
 import { RequireAuth } from '../ui/RequireAuth';
 
+// TODO add tests
 export const AppRouter = () => {
     const renderWithWrapper = useCallback((route: AppRoutesProps) => {
         const element = (
