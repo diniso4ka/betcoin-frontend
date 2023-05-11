@@ -14,7 +14,6 @@ export const buildCssLoader = (isDev: boolean) => ({
                 },
             },
         },
-        'resolve-url-loader',
         'sass-loader',
     ],
 });
