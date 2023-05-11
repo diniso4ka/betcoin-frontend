@@ -50,6 +50,7 @@ export const buildPlugins = ({ paths, isDev, apiUrl, project }: BuildOptions): w
         plugins.push(new CopyPlugin({
             patterns: [
                 { from: paths.locales, to: paths.buildLocales },
+                { from: paths.fonts, to: paths.buildFonts },
             ],
         }));
     }

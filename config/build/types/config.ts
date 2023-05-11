@@ -7,6 +7,8 @@ export interface BuildPath {
     src: string;
     locales: string;
     buildLocales: string;
+    fonts: string;
+    buildFonts: string;
 }
 
 export interface BuildEnv {
