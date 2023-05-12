@@ -88,21 +88,19 @@ module.exports = {
             'error',
             {
                 groups: [
-                    //Absolute imports (path from 'path')
-                    ['^\\w+$'],
                     // Packages. `react` related packages come first.
-                    ['^react'],
-                    ['^@?\\w'],
+                    // Absolute imports (path from 'path')
+                    ['^react', '^@?\\w'],
                     // Internal packages.
-                    ['(app|pages|widgets|entities|shared)(/.*|$)'],
+                    ['(app|pages|widgets|features|entities)(/.*|$)'],
+                    // Without assets.
+                    ['^@/shared(?!\\/assets)'],
                     // Side effect imports.
                     ['^\\u0000'],
                     // Parent imports. Put `..` last.
-                    ['^\\.\\.(?!/?$)'],
-                    ['^\\.\\./?$'],
-                    ['^\\.(?!/?$)'],
+                    ['^\\.\\.(?!/?$)', '^\\.\\./?$', '^\\.(?!/?$)'],
                     // Assets
-                    ['^shared\\/assets.+'],
+                    ['^@/shared\\/assets'],
                     // Styles.
                     ['^.+\\.s?css$'],
                 ],

@@ -1,7 +1,6 @@
-import cn from 'classnames';
 import { memo, ReactNode } from 'react';
-
 import { Link, LinkProps } from 'react-router-dom';
+import cn from 'classnames';
 
 import { AppLinkSize, AppLinkTheme } from './types';
 

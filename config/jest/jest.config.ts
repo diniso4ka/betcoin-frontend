@@ -1,6 +1,5 @@
-import path from 'path';
-
 import type { Config } from 'jest';
+import path from 'path';
 
 const config: Config = {
     globals: {
