@@ -3,14 +3,14 @@ import cn from 'classnames';
 
 import s from './Skeleton.module.scss';
 
-interface SkeletonProps {
+interface ISkeletonProps {
     className?: string;
     width?: string | number;
     height?: string | number;
     borderRadius?: string | number;
 }
 
-const SkeletonComponent = (props: SkeletonProps) => {
+const SkeletonComponent = (props: ISkeletonProps) => {
     const { className, width, height, borderRadius } = props;
 
     const styles: CSSProperties = {

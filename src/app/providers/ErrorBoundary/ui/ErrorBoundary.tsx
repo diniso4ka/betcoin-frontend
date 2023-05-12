@@ -1,18 +1,18 @@
 import { Component, ErrorInfo, ReactNode, Suspense } from 'react';
 
-interface ErrorBoundaryProps {
+interface IErrorBoundaryProps {
     children: ReactNode;
 }
 
-interface ErrorBoundaryState {
+interface IErrorBoundaryState {
     hasError: boolean;
 }
 
 export class ErrorBoundary extends Component<
-    ErrorBoundaryProps,
-    ErrorBoundaryState
+    IErrorBoundaryProps,
+    IErrorBoundaryState
 > {
-    constructor(props: ErrorBoundaryProps) {
+    constructor(props: IErrorBoundaryProps) {
         super(props);
         this.state = { hasError: false };
     }

@@ -17,7 +17,7 @@ type HTMLInputProps = Omit<
     'value' | 'onChange' | 'readOnly' | 'disabled'
 >;
 
-interface InputProps extends HTMLInputProps {
+interface IInputProps extends HTMLInputProps {
     value?: string | number;
     onChange?: (value: string) => void;
     autoFocus?: boolean;
@@ -27,7 +27,7 @@ interface InputProps extends HTMLInputProps {
     search?: boolean;
 }
 
-const InputComponent = (props: InputProps) => {
+const InputComponent = (props: IInputProps) => {
     const {
         className,
         type = 'text',

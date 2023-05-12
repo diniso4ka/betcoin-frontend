@@ -3,11 +3,11 @@ import cn from 'classnames';
 
 import s from './Loader.module.scss';
 
-interface LoaderProps {
+interface ILoaderProps {
     className?: string;
 }
 
-const LoaderComponent = (props: LoaderProps) => {
+const LoaderComponent = (props: ILoaderProps) => {
     const { className } = props;
 
     return (

@@ -5,7 +5,7 @@ import { ButtonSize, ButtonTheme, ButtonType, ButtonWidth } from './types';
 
 import s from './Button.module.scss';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
     className?: string;
     disabled?: boolean;
@@ -15,7 +15,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     buttonType?: ButtonType;
 }
 
-const ButtonComponent = (props: ButtonProps) => {
+const ButtonComponent = (props: IButtonProps) => {
     const {
         className,
         children,

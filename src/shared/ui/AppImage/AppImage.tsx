@@ -6,13 +6,13 @@ import {
     useState,
 } from 'react';
 
-interface AppImageProps extends ImgHTMLAttributes<HTMLImageElement> {
+interface IAppImageProps extends ImgHTMLAttributes<HTMLImageElement> {
     fallback?: ReactElement;
     errorFallback?: ReactElement;
     className?: string;
 }
 
-const AppImageComponent = (props: AppImageProps) => {
+const AppImageComponent = (props: IAppImageProps) => {
     const {
         errorFallback,
         fallback,

@@ -2,11 +2,11 @@ import { Navigate, useLocation } from 'react-router-dom';
 
 import { getRouteMain } from '@/shared/const/router';
 
-interface RequireAuthProps {
+interface IRequireAuthProps {
     children: JSX.Element;
 }
 
-export const RequireAuth = ({ children }: RequireAuthProps) => {
+export const RequireAuth = ({ children }: IRequireAuthProps) => {
     const location = useLocation();
     const auth = true;
 

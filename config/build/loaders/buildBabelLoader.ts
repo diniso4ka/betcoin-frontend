@@ -1,11 +1,11 @@
 import {babelRemovePropsPlugin} from '../../babel/babelRemovePropsPlugin';
 import { BuildOptions } from '../types/config';
 
-interface BuildBabelLoaderProps extends BuildOptions {
+interface IBuildBabelLoaderProps extends BuildOptions {
     isTSX?: boolean;
 }
 
-export const buildBabelLoader = ({ isDev, isTSX }: BuildBabelLoaderProps) => {
+export const buildBabelLoader = ({ isDev, isTSX }: IBuildBabelLoaderProps) => {
     return {
         test: isTSX ? /\.(jsx|tsx)$/ : /\.(js|ts)$/,
         exclude: /node_modules/,
