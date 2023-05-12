@@ -1,4 +1,4 @@
-import { Suspense, useCallback } from 'react';
+import { memo, Suspense, useCallback } from 'react';
 
 import { Route, Routes } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ import { routerConfig } from '../config/routeConfig';
 import { RequireAuth } from '../ui/RequireAuth';
 
 // TODO add tests
-export const AppRouter = () => {
+const AppRouterComponent = () => {
     const renderWithWrapper = useCallback((route: AppRoutesProps) => {
         const element = (
             <Suspense fallback={<p>Loading...</p>}>{route.element}</Suspense>
@@ -31,3 +31,5 @@ export const AppRouter = () => {
 
     return <Routes>{routerConfig.map(renderWithWrapper)}</Routes>;
 };
+
+export const AppRouter = memo(AppRouterComponent);
