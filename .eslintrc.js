@@ -147,5 +147,16 @@ module.exports = {
             },
         ],
         '@typescript-eslint/no-non-null-assertion': 'off',
+        '@typescript-eslint/naming-convention': [
+            2,
+            {
+                selector: 'interface',
+                format: ['PascalCase'],
+                custom: {
+                    regex: '^I[A-Z]',
+                    match: true,
+                },
+            },
+        ],
     },
 };
