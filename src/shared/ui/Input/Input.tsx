@@ -1,4 +1,3 @@
-import cn from 'classnames';
 import {
     ChangeEvent,
     InputHTMLAttributes,
@@ -7,6 +6,7 @@ import {
     useRef,
     useState,
 } from 'react';
+import cn from 'classnames';
 
 import SearchIcon from '@/shared/assets/icons/search.svg';
 

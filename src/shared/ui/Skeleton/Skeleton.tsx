@@ -1,5 +1,5 @@
-import cn from 'classnames';
 import { CSSProperties, memo } from 'react';
+import cn from 'classnames';
 
 import s from './Skeleton.module.scss';
 

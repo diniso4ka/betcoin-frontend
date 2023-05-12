@@ -1,7 +1,6 @@
+import type { StorybookConfig } from '@storybook/react-webpack5';
 import path from 'path';
 import webpack, { DefinePlugin } from 'webpack';
-
-import type { StorybookConfig } from '@storybook/react-webpack5';
 
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
 import { BuildPath } from '../build/types/config';
@@ -28,6 +27,8 @@ const config: StorybookConfig = {
             src: path.resolve(__dirname, '..', '..', 'src'),
             locales: '',
             buildLocales: '',
+            fonts: '',
+            buildFonts: '',
         };
 
         config.resolve!.modules!.push(paths.src);

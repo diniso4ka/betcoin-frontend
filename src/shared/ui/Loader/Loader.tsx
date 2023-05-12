@@ -1,5 +1,5 @@
-import cn from 'classnames';
 import { memo } from 'react';
+import cn from 'classnames';
 
 import s from './Loader.module.scss';
 

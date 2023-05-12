@@ -1,5 +1,5 @@
-import cn from 'classnames';
 import { ButtonHTMLAttributes, memo, MouseEvent, ReactNode } from 'react';
+import cn from 'classnames';
 
 import { ButtonSize, ButtonTheme, ButtonType, ButtonWidth } from './types';
 
