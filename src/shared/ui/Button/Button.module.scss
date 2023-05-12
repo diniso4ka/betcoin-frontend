@@ -69,57 +69,57 @@
 .THEME {
     &_GREEN {
         color: var(--white-color);
-        background-color: var(--ligth-green-color);
+        background-color: var(--button-green-color);
 
         &:hover {
-            background-color: var(--ligth-green-hover-color);
+            background-color: var(--button-green-hover-color);
         }
     }
 
     &_RED {
         color: var(--white-color);
-        background-color: var(--ligth-red-color);
+        background-color: var(--button-red-color);
 
         &:hover {
-            background-color: var(--ligth-red-hover-color);
+            background-color: var(--button-red-hover-color);
         }
     }
 
     &_BLUE {
         color: var(--white-color);
-        background-color: var(--dark-blue-color);
+        background-color: var(--button-blue-color);
 
         &:hover {
-            background-color: var(--dark-blue-hover-color);
+            background-color: var(--button-blue-hover-color);
         }
     }
 
     &_GRAY {
         color: var(--white-color);
-        background-color: var(--dark-gray-color);
+        background-color: var(--button-gray-color);
 
         &:hover {
-            background-color: var(--dark-gray-hover-color);
+            background-color: var(--button-gray-hover-color);
         }
     }
 }
 
 .TYPE {
     &_SQUARE {
-        border-radius: 12px;
+        border-radius: var(--radius-m);
     }
 
     &_CIRCLE {
-        border-radius: 15px;
+        border-radius: var(--radius-l);
     }
 }
 
 .disabled {
-    color: var(--button-disable-text-color);
-    background-color: var(--button-disable-bg-color);
+    color: var(--button-disable-value-color);
+    background-color: var(--button-disable-color);
     cursor: default;
     
     &:hover {
-        background-color: var(--button-disable-bg-color);
+        background-color: var(--button-disable-color);
     }
 }
