@@ -6,14 +6,14 @@ import { AppLinkSize, AppLinkTheme } from './types';
 
 import s from './AppLink.module.scss';
 
-interface AppLinkProps extends LinkProps {
+interface IAppLinkProps extends LinkProps {
     children: ReactNode;
     className?: string;
     theme?: AppLinkTheme;
     size?: AppLinkSize;
 }
 
-const AppLinkComponent = (props: AppLinkProps) => {
+const AppLinkComponent = (props: IAppLinkProps) => {
     const {
         className,
         children,

@@ -1,4 +1,4 @@
-import { StateSchema } from '@/app/providers/StoreProvider';
+import { IStateSchema } from '@/app/providers/StoreProvider';
 
-export const getCounterValue = (state: StateSchema) =>
+export const getCounterValue = (state: IStateSchema) =>
     state.counter?.value || 0;

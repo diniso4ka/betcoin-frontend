@@ -29,7 +29,7 @@ const gapClasses: Record<FlexGap, string> = {
     32: s.gap32,
 };
 
-export interface FlexProps {
+export interface IFlexProps {
     children: ReactNode;
     justify?: FlexJustify;
     align?: FlexAlign;
@@ -47,7 +47,7 @@ export const Flex = ({
     direction = 'row',
     gap,
     max,
-}: FlexProps) => {
+}: IFlexProps) => {
     const classnames = cn(
         s.flex,
         className,
