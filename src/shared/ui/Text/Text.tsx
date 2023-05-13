@@ -13,12 +13,12 @@ interface ITextProps {
     text?: string;
 }
 
-enum HeadingMap {
-    SIZE_1 = 'h1',
-    SIZE_2 = 'h2',
-    SIZE_3 = 'h3',
-    SIZE_4 = 'h4',
-}
+const HeadingMap = {
+    SIZE_1: 'h1',
+    SIZE_2: 'h2',
+    SIZE_3: 'h3',
+    SIZE_4: 'h4',
+};
 
 const TextComponent = (props: ITextProps) => {
     const {
