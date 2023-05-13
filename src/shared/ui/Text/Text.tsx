@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import cn from 'classnames';
 
-import { TextSize, TextTheme } from './types';
+import { HeadingSize, TextSize, TextTheme } from './types';
 
 import s from './Text.module.scss';
 
@@ -13,7 +13,7 @@ interface ITextProps {
     text?: string;
 }
 
-const HeadingMap: Record<TextSize, string> = {
+const HeadingMap: Record<TextSize, HeadingSize> = {
     SIZE_1: 'h1',
     SIZE_2: 'h2',
     SIZE_3: 'h3',
