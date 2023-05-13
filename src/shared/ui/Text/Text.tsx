@@ -5,14 +5,14 @@ import { TextSize, TextTheme } from './types';
 
 import s from './Text.module.scss';
 
-interface TextProps {
+interface ITextProps {
     className?: string;
     size?: TextSize;
     theme?: TextTheme;
     value: string;
 }
 
-const TextComponent = (props: TextProps) => {
+const TextComponent = (props: ITextProps) => {
     const {
         className,
         value,

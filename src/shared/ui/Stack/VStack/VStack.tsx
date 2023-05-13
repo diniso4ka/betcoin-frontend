@@ -1,6 +1,6 @@
-import { Flex, FlexProps } from '../Flex/Flex';
+import { Flex, IFlexProps } from '../Flex/Flex';
 
-type VStackProps = Omit<FlexProps, 'direction'>;
+type VStackProps = Omit<IFlexProps, 'direction'>;
 
 export const VStack = (props: VStackProps) => (
     <Flex direction='column' {...props} />
