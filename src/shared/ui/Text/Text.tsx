@@ -13,7 +13,7 @@ interface ITextProps {
     text?: string;
 }
 
-const HeadingMap = {
+const HeadingMap: Record<TextSize, string> = {
     SIZE_1: 'h1',
     SIZE_2: 'h2',
     SIZE_3: 'h3',
