@@ -9,20 +9,36 @@ interface ITextProps {
     className?: string;
     size?: TextSize;
     theme?: TextTheme;
-    value: string;
+    title?: string;
+    text?: string;
+}
+
+enum HeadingMap {
+    SIZE_1 = 'h1',
+    SIZE_2 = 'h2',
+    SIZE_3 = 'h3',
+    SIZE_4 = 'h4',
 }
 
 const TextComponent = (props: ITextProps) => {
     const {
         className,
-        value,
+        title,
+        text,
         theme = 'THEME_DEFAULT',
-        size = 'SIZE_P2',
+        size = 'SIZE_2',
     } = props;
+    const Heading = HeadingMap[size];
+    const classes = cn(className, s[theme], s[size]);
 
-    const classes = cn(className, s.text, s[theme], s[size]);
-
-    return <p className={classes}>{value}</p>;
+    return (
+        <>
+            {title && (
+                <Heading className={cn(s.heading, classes)}>{title}</Heading>
+            )}
+            {text && <p className={cn(s.text, classes)}>{text}</p>}
+        </>
+    );
 };
 
 export const Text = memo(TextComponent);

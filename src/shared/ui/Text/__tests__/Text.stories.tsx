@@ -9,7 +9,7 @@ const meta: Meta<typeof Text> = {
     component: Text,
     argTypes: {},
     args: {
-        value: 'Text',
+        title: 'Text',
     },
 };
 
