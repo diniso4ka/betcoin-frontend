@@ -1,11 +1,5 @@
 export type TextTheme = 'THEME_DEFAULT' | 'THEME_DARK' | 'THEME_ERROR';
 
-export type TextSize =
-    | 'SIZE_H1'
-    | 'SIZE_H2'
-    | 'SIZE_H3'
-    | 'SIZE_H4'
-    | 'SIZE_P1'
-    | 'SIZE_P2'
-    | 'SIZE_P3'
-    | 'SIZE_P4';
+export type TextSize = 'SIZE_1' | 'SIZE_2' | 'SIZE_3' | 'SIZE_4';
+
+export type HeadingSize = 'h1' | 'h2' | 'h3' | 'h4';
