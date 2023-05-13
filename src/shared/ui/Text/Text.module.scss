@@ -1,0 +1,48 @@
+.text {
+    font-family: 'Gilroy', sans-serif;
+}
+
+.SIZE_H1 {
+    font-size: var(--font-size-h1);
+}
+
+.SIZE_H2 {
+    font-size: var(--font-size-h2);
+}
+
+.SIZE_H3 {
+    font-size: var(--font-size-h3);
+}
+
+.SIZE_H4 {
+    font-size: var(--font-size-h4);
+}
+
+.SIZE_P1 {
+    font-size: var(--font-size-p1);
+}
+
+.SIZE_P2 {
+    font-size: var(--font-size-p2);
+}
+
+.SIZE_P3 {
+    font-size: var(--font-size-p3);
+}
+
+.SIZE_P4 {
+    font-size: var(--font-size-p4);
+}
+
+// TODO Скорректировать цвета с дизом
+.THEME_DEFAULT {
+    color: var(--white-color);
+}
+
+.THEME_DARK {
+    color: var(--light-black-color);
+}
+
+.THEME_ERROR {
+    color: var(--red-color);
+}
