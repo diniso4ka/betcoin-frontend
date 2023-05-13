@@ -1,0 +1,35 @@
+:root {
+    --dark-purple-color: #171721;
+    --light-purple-color: #2c2c38;
+    --white-color: #fff;
+    --green-color: #53b645;
+    --light-green-color: #76de67;
+    --red-color: #e13c31;
+    --light-red-color: #fc584d;
+    --dark-blue-color: #4e44ce;
+    --blue-color: #6f64fa;
+    --purple-hover-color: #9e97ff;
+    --light-black-color: #2f2f2f;
+    --dark-gray-color: #3d3d3d;
+    --gray-color: #817f7f;
+    --light-gray-color: #c1c1c1;
+
+    // COMMON
+    --bg-primary-color: var(--dark-purple-color);
+    --bg-secodnary-color: var(--light-purple-color);
+
+    // BUTTONS
+    --button-green-color: var(--green-color);
+    --button-green-hover-color: var(--light-green-color);
+    --button-red-color: var(--red-color);
+    --button-red-hover-color: var(--light-red-color);
+    --button-blue-color: var(--dark-blue-color);
+    --button-blue-hover-color: var(--blue-color);
+    --button-gray-color: var(--light-black-color);
+    --button-gray-hover-color: var(--dark-gray-color);
+    --button-disable-color: var(--gray-color);
+    --button-disable-value-color: var(--light-gray-color);
+
+    // INPUTS
+    --input-value-color: var(--light-gray-color);
+}

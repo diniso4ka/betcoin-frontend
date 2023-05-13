@@ -1,0 +1,10 @@
+@import 'nullstyle';
+@import './variables/global';
+@import './variables/fonts';
+@import './variables/colors';
+
+body {
+    font-family: var(--font-family-main);
+    color: var(--white-color);
+    background-color: var(--bg-primary-color);
+}

@@ -1,0 +1,125 @@
+.Button {
+    transition: background-color var(--animation-delay) ease-in-out;
+    cursor: pointer;
+}
+
+.SIZE_L {
+    height: 56px;
+    font-size: var(--font-size-h4);
+
+    &_WIDTH_XL {
+        width: 180px;
+    }
+
+    &_WIDTH_L {
+        width: 135px;
+    }
+
+    &_WIDTH_M {
+        width: 90px;
+    }
+
+    &_WIDTH_S {
+        width: 56px;
+    }
+}
+
+.SIZE_M {
+    height: 48px;
+    font-size: var(--font-size-p1);
+
+    &_WIDTH_XL {
+        width: 171px;
+    }
+
+    &_WIDTH_L {
+        width: 128px;
+    }
+
+    &_WIDTH_M {
+        width: 85px;
+    }
+
+    &_WIDTH_S {
+        width: 48px;
+    }
+}
+
+.SIZE_S {
+    height: 36px;
+    font-size: var(--font-size-p3);
+
+    &_WIDTH_XL {
+        width: 161px;
+    }
+
+    &_WIDTH_L {
+        width: 120px;
+    }
+
+    &_WIDTH_M {
+        width: 80px;
+    }
+
+    &_WIDTH_S {
+        width: 36px;
+    }
+}
+
+.THEME {
+    &_GREEN {
+        color: var(--white-color);
+        background-color: var(--button-green-color);
+
+        &:hover {
+            background-color: var(--button-green-hover-color);
+        }
+    }
+
+    &_RED {
+        color: var(--white-color);
+        background-color: var(--button-red-color);
+
+        &:hover {
+            background-color: var(--button-red-hover-color);
+        }
+    }
+
+    &_BLUE {
+        color: var(--white-color);
+        background-color: var(--button-blue-color);
+
+        &:hover {
+            background-color: var(--button-blue-hover-color);
+        }
+    }
+
+    &_GRAY {
+        color: var(--white-color);
+        background-color: var(--button-gray-color);
+
+        &:hover {
+            background-color: var(--button-gray-hover-color);
+        }
+    }
+}
+
+.TYPE {
+    &_SQUARE {
+        border-radius: var(--radius-m);
+    }
+
+    &_CIRCLE {
+        border-radius: var(--radius-l);
+    }
+}
+
+.disabled {
+    color: var(--button-disable-value-color);
+    background-color: var(--button-disable-color);
+    cursor: default;
+    
+    &:hover {
+        background-color: var(--button-disable-color);
+    }
+}
