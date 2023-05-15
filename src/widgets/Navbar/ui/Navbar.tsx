@@ -1,6 +1,5 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import cn from 'classnames';
 
 import { getRouteMain } from '@/shared/const/router';
 import { AppLink } from '@/shared/ui/AppLink';
@@ -16,6 +15,7 @@ interface INavbarProps {
 const NavbarComponent = ({ className }: INavbarProps) => {
     const { t } = useTranslation();
 
+    // TODO with reselect (auth/no-auth)
     const navbarList: INavbarItem[] = [
         { title: t('Main'), to: getRouteMain() },
         { title: t('Blog'), to: getRouteMain() },
@@ -23,8 +23,8 @@ const NavbarComponent = ({ className }: INavbarProps) => {
     ];
 
     return (
-        <nav className={cn(s.navbar, className)}>
-            <ul>
+        <nav className={className}>
+            <ul className={s.navList}>
                 {navbarList.map((item) => (
                     <li key={item.title}>
                         <AppLink to={item.to}>{item.title}</AppLink>
