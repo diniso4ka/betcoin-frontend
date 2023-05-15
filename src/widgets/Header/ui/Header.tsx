@@ -3,10 +3,9 @@ import { useTranslation } from 'react-i18next';
 
 import { Button } from '@/shared/ui/Button';
 import { Input } from '@/shared/ui/Input';
+import { Logo } from '@/shared/ui/Logo';
 
 import { Navbar } from '../../Navbar';
-
-import LogoIcon from '@/shared/assets/icons/logo.svg';
 
 import s from './Header.module.scss';
 
@@ -15,7 +14,7 @@ const HeaderComponent = () => {
 
     return (
         <header className={s.header}>
-            <LogoIcon />
+            <Logo />
             <Navbar />
             <Input
                 className={s.searchInput}
