@@ -1,5 +1,6 @@
 .dropdown {
     position: relative;
+    width: fit-content;
 }
 
 .menu {
@@ -19,8 +20,9 @@
 
 .item {
     letter-spacing: 0.01rem;
+    white-space: nowrap;
     color: var(--white-color);
-    transition: 0.2s color ease-in-out;
+    transition: color ease-in-out var(--animation-delay);
     cursor: pointer;
     
     @media (any-hover: hover) {
