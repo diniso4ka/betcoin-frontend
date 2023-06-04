@@ -1,0 +1,11 @@
+.trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.currentLang {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--white-color);
+}
