@@ -1,9 +1,11 @@
 import type { Preview } from '@storybook/react';
 
+import '../../src/shared/config/i18n/i18n';
+
 import { RouterDecorator } from '../../src/shared/config/storybook/RouterDecorator';
 import { SuspenseDecorator } from '../../src/shared/config/storybook/SuspenseDecorator';
 
-import '@/app/styles/index.scss';
+import '../../src/app/styles/index.scss';
 
 const preview: Preview = {
     parameters: {

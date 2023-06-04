@@ -3,37 +3,38 @@
     outline: none;
     border: none;
     padding: 0;
+    color: var(--white-color);
     background: none;
     cursor: pointer;
 }
 
-.topLeft {
+.TOP_LEFT {
     left: 0;
     bottom: 125%;
 }
 
-.topRight {
+.TOP_RIGHT {
     right: 0;
     bottom: 125%;
 }
 
-.bottomLeft {
+.BOTTOM_LEFT {
     left: 0;
     top: 125%;
 }
 
-.bottomRight {
+.BOTTOM_RIGHT {
     right: 0;
     top: 125%;
 }
 
-.bottomCenter {
+.BOTTOM_CENTER {
     left: 50%;
     top: 125%;
     transform: translateX(-50%);
 }
 
-.topCenter {
+.TOP_CENTER {
     left: 50%;
     bottom: 125%;
     transform: translateX(-50%);

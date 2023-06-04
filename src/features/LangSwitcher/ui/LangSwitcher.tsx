@@ -13,7 +13,7 @@ const LangSwitcherComponent = memo(() => {
 
     const trigger = (
         <div className={s.trigger}>
-            <p>{i18n.language.toUpperCase()}</p>
+            <p className={s.currentLang}>{i18n.language.toUpperCase()}</p>
             <ArrowIcon />
         </div>
     );
@@ -32,7 +32,7 @@ const LangSwitcherComponent = memo(() => {
     ];
 
     return (
-        <Dropdown trigger={trigger} items={items} direction='bottomCenter' />
+        <Dropdown trigger={trigger} items={items} direction='BOTTOM_CENTER' />
     );
 });
 

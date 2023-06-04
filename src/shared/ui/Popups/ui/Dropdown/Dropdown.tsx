@@ -2,9 +2,10 @@ import { memo, ReactNode, useRef, useState } from 'react';
 import cn from 'classnames';
 
 import { useClickOutside } from '@/shared/lib/hooks/useClickOutside';
-import { DropdownDirection } from '@/shared/types/ui';
 
-import popupS from '../../styles/Popup.module.scss';
+import { DropdownDirection } from '../../types';
+
+import popupS from '../../Popup.module.scss';
 import s from './Dropdown.module.scss';
 
 export interface IDropdownItem {
@@ -23,20 +24,24 @@ interface IDropdownProps {
 }
 
 const DropdownComponent = (props: IDropdownProps) => {
-    const { direction = 'bottomRight', trigger, items, className } = props;
+    const { direction = 'BOTTOM_RIGHT', trigger, items, className } = props;
 
     const [isVisible, setIsVisible] = useState(false);
     const dropdownRef = useRef<HTMLDivElement | null>(null);
 
     useClickOutside(dropdownRef, () => setIsVisible(false), isVisible);
 
-    const handleClick = () => {
+    const handleClickTrigger = () => {
         setIsVisible((prev) => !prev);
     };
 
+    const handleClickItem = (onClick?: () => void) => {
+        onClick?.();
+        setIsVisible(false);
+    };
     return (
         <div className={cn(s.dropdown, className)} ref={dropdownRef}>
-            <button className={popupS.trigger} onClick={handleClick}>
+            <button className={popupS.trigger} onClick={handleClickTrigger}>
                 {trigger}
             </button>
             {isVisible && (
@@ -45,7 +50,7 @@ const DropdownComponent = (props: IDropdownProps) => {
                         <li
                             key={i}
                             className={cn(s.item, { [s.active]: item.active })}
-                            onClick={item?.onClick}
+                            onClick={() => handleClickItem(item.onClick)}
                         >
                             {item.content}
                         </li>

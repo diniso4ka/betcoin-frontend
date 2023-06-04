@@ -16,11 +16,7 @@ export const useClickOutside = (
             }
         };
 
-        if (deleteListener !== undefined) {
-            if (deleteListener) {
-                document.addEventListener('click', handleClickOutside);
-            }
-        } else {
+        if (deleteListener === undefined || deleteListener) {
             document.addEventListener('click', handleClickOutside);
         }
 
