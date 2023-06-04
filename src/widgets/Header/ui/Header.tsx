@@ -1,6 +1,8 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { LangSwitcher } from '@/features/LangSwitcher';
+
 import { Button } from '@/shared/ui/Button';
 import { Input } from '@/shared/ui/Input';
 import { Logo } from '@/shared/ui/Logo';
@@ -20,9 +22,12 @@ const HeaderComponent = () => {
                 className={s.searchInput}
                 placeholder={t('Search for NFT') as string}
             />
-            <div className={s.buttons}>
-                <Button>{t('Log in')}</Button>
-                <Button>{t('Sign up')}</Button>
+            <div className={s.right}>
+                <div className={s.buttons}>
+                    <Button>{t('Log in')}</Button>
+                    <Button>{t('Sign up')}</Button>
+                </div>
+                <LangSwitcher />
             </div>
         </header>
     );

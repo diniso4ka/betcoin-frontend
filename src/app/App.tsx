@@ -1,4 +1,3 @@
-import { LangSwitcher } from '@/features/LangSwitcher';
 import { Header } from '@/widgets/Header';
 
 import { AppRouter } from './providers/router';
@@ -9,8 +8,9 @@ export const App = () => {
     return (
         <div className='app'>
             <Header />
-            <AppRouter />
-            <LangSwitcher />
+            <main>
+                <AppRouter />
+            </main>
         </div>
     );
 };
