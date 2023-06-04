@@ -1,0 +1,40 @@
+.trigger {
+    margin: 0;
+    outline: none;
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.topLeft {
+    left: 0;
+    bottom: 125%;
+}
+
+.topRight {
+    right: 0;
+    bottom: 125%;
+}
+
+.bottomLeft {
+    left: 0;
+    top: 125%;
+}
+
+.bottomRight {
+    right: 0;
+    top: 125%;
+}
+
+.bottomCenter {
+    left: 50%;
+    top: 125%;
+    transform: translateX(-50%);
+}
+
+.topCenter {
+    left: 50%;
+    bottom: 125%;
+    transform: translateX(-50%);
+}
