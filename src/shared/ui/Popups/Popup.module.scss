@@ -1,0 +1,41 @@
+.trigger {
+    margin: 0;
+    outline: none;
+    border: none;
+    padding: 0;
+    color: var(--white-color);
+    background: none;
+    cursor: pointer;
+}
+
+.TOP_LEFT {
+    left: 0;
+    bottom: 125%;
+}
+
+.TOP_RIGHT {
+    right: 0;
+    bottom: 125%;
+}
+
+.BOTTOM_LEFT {
+    left: 0;
+    top: 125%;
+}
+
+.BOTTOM_RIGHT {
+    right: 0;
+    top: 125%;
+}
+
+.BOTTOM_CENTER {
+    left: 50%;
+    top: 125%;
+    transform: translateX(-50%);
+}
+
+.TOP_CENTER {
+    left: 50%;
+    bottom: 125%;
+    transform: translateX(-50%);
+}

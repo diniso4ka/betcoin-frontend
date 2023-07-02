@@ -2,55 +2,55 @@
     display: flex;
 }
 
-.justifyStart {
+.JUSTIFY_START {
     justify-content: flex-start;
 }
 
-.justifyEnd {
+.JUSTIFY_END {
     justify-content: flex-end;
 }
 
-.justifyCenter {
+.JUSTIFY_CENTER {
     justify-content: center;
 }
 
-.justifyBetween {
+.JUSTIFY_BETWEEN {
     justify-content: space-between;
 }
 
-.alignStart {
+.ALIGN_START {
     align-items: flex-start;
 }
 
-.alignEnd {
+.ALIGN_END {
     align-items: flex-end;
 }
 
-.alignCenter {
+.ALIGN_CENTER {
     align-items: center;
 }
 
-.directionRow {
+.DIRECTION_ROW {
     flex-direction: row;
 }
 
-.directionColumn {
+.DIRECTION_COLUMN {
     flex-direction: column;
 }
 
-.gap4 {
+.GAP_4 {
     gap: 4px;
 }
 
-.gap8 {
+.GAP_8 {
     gap: 8px;
 }
 
-.gap16 {
+.GAP_16 {
     gap: 16px;
 }
 
-.gap32 {
+.GAP_32 {
     gap: 32px;
 }
 

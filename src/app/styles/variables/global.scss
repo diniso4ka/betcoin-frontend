@@ -1,4 +1,7 @@
 :root {
+    // sizes
+    --main-content-width: 1200px;
+    
     // delay
     --animation-delay: 0.2s;
     
@@ -13,4 +16,7 @@
     --radius-l: 15px;
     --radius-xl: 25px;
     --radius-xxl: 60px;
+    
+    // z-index
+    --popup-z-index: 2;
 }

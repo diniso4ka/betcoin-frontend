@@ -6,27 +6,27 @@ import { FlexAlign, FlexDirection, FlexGap, FlexJustify } from './types';
 import s from './Flex.module.scss';
 
 const justifyClasses: Record<FlexJustify, string> = {
-    start: s.justifyStart,
-    end: s.justifyEnd,
-    center: s.justifyCenter,
-    between: s.justifyBetween,
+    START: s.JUSTIFY_START,
+    END: s.JUSTIFY_END,
+    CENTER: s.JUSTIFY_CENTER,
+    BETWEEN: s.JUSTIFY_BETWEEN,
 };
 
 const alignClasses: Record<FlexAlign, string> = {
-    start: s.alignStart,
-    end: s.alignEnd,
-    center: s.alignCenter,
+    START: s.ALIGN_START,
+    END: s.ALIGN_END,
+    CENTER: s.ALIGN_CENTER,
 };
 
 const directionClasses: Record<FlexDirection, string> = {
-    row: s.directionRow,
-    column: s.directionColumn,
+    ROW: s.DIRECTION_ROW,
+    COLUMN: s.DIRECTION_COLUMN,
 };
 const gapClasses: Record<FlexGap, string> = {
-    4: s.gap4,
-    8: s.gap8,
-    16: s.gap16,
-    32: s.gap32,
+    4: s.GAP_4,
+    8: s.GAP_8,
+    16: s.GAP_16,
+    32: s.GAP_32,
 };
 
 export interface IFlexProps {
@@ -42,9 +42,9 @@ export interface IFlexProps {
 export const Flex = ({
     className,
     children,
-    align = 'center',
-    justify = 'start',
-    direction = 'row',
+    align = 'CENTER',
+    justify = 'START',
+    direction = 'ROW',
     gap,
     max,
 }: IFlexProps) => {

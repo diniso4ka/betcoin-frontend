@@ -19,9 +19,9 @@ const ButtonComponent = (props: IButtonProps) => {
     const {
         className,
         children,
-        theme = 'THEME_GREEN',
+        theme = 'THEME_BLUE',
         size = 'SIZE_M',
-        width = 'WIDTH_M',
+        width = 'WIDTH_L',
         buttonType = 'TYPE_SQUARE',
         disabled,
         onClick,

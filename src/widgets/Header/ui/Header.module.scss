@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    border-radius: var(--radius-l);
+    padding: 26px 30px;
+    max-width: var(--main-content-width);
+    background-color: var(--bg-secodnary-color);
+}
+
+.searchInput {
+    max-width: 250px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
