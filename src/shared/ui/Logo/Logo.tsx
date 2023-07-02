@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import { getRouteMain } from '@/shared/const/router';
+import { MAIN_ROUTE } from '@/shared/const/router';
 
 import { AppLink } from '../AppLink';
 
@@ -16,7 +16,7 @@ const LogoComponent = (props: ILogoProps) => {
     const Logo = <LogoIcon key='logoIcon' className={className} />;
 
     if (isLink) {
-        return <AppLink to={getRouteMain()}>{Logo}</AppLink>;
+        return <AppLink to={MAIN_ROUTE}>{Logo}</AppLink>;
     }
 
     return Logo;

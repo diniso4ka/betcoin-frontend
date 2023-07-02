@@ -8,6 +8,8 @@ import {
 } from 'react';
 import cn from 'classnames';
 
+import { InputVariant } from './types';
+
 import SearchIcon from '@/shared/assets/icons/search.svg';
 
 import s from './Input.module.scss';
@@ -19,8 +21,9 @@ type HTMLInputProps = Omit<
 
 interface IInputProps extends HTMLInputProps {
     value?: string | number;
-    onChange?: (value: string) => void;
+    onChange?: ({ field, value }: { field: any; value: string }) => void;
     autoFocus?: boolean;
+    variant?: InputVariant;
     className?: string;
     readonly?: boolean;
     disabled?: boolean;
@@ -30,13 +33,11 @@ interface IInputProps extends HTMLInputProps {
 const InputComponent = (props: IInputProps) => {
     const {
         className,
-        type = 'text',
-        value,
+        variant = 'DEFAULT',
         onChange,
         autoFocus,
-        readonly,
         disabled,
-        search = true,
+        search = false,
         ...rest
     } = props;
 
@@ -44,8 +45,13 @@ const InputComponent = (props: IInputProps) => {
     const inputRef = useRef<HTMLInputElement | null>(null);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-        onChange?.(e.target.value);
+        onChange?.({ field: e.target.name, value: e.target.value });
     };
+
+    const classnames = cn(s.inputWrapper, className, s[variant], {
+        [s.focused]: isFocused,
+        [s.disabled]: disabled,
+    });
 
     useEffect(() => {
         if (autoFocus) {
@@ -55,18 +61,10 @@ const InputComponent = (props: IInputProps) => {
     }, [autoFocus]);
 
     return (
-        <div
-            className={cn(s.inputWrapper, className, {
-                [s.focused]: isFocused,
-                [s.disabled]: disabled,
-            })}
-        >
+        <div className={classnames}>
             <input
                 ref={inputRef}
                 className={s.input}
-                type={type}
-                value={value}
-                readOnly={readonly}
                 disabled={disabled}
                 onChange={handleChange}
                 onFocus={() => setIsFocused(true)}
