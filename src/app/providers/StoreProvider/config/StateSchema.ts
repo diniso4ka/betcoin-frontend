@@ -1,5 +1,5 @@
-import { ICounterSchema } from '@/entities/Counter';
+import { ILoginByUsernameSchema } from '@/features/LoginByUsername';
 
 export interface IStateSchema {
-    counter: ICounterSchema;
+    loginByUsername: ILoginByUsernameSchema;
 }

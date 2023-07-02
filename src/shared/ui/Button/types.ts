@@ -4,7 +4,12 @@ export type ButtonTheme =
     | 'THEME_BLUE'
     | 'THEME_GRAY';
 
-export type ButtonWidth = 'WIDTH_S' | 'WIDTH_M' | 'WIDTH_L' | 'WIDTH_XL';
+export type ButtonWidth =
+    | 'WIDTH_S'
+    | 'WIDTH_M'
+    | 'WIDTH_L'
+    | 'WIDTH_XL'
+    | 'WIDTH_RESPONSIVE';
 
 export type ButtonSize = 'SIZE_S' | 'SIZE_M' | 'SIZE_L';
 
