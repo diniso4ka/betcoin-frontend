@@ -1,5 +1,17 @@
-import { ILoginByUsernameSchema } from '@/features/LoginByUsername';
+import { AxiosInstance } from 'axios';
+
+import { IAuthByLoginSchema } from '@/features/AuthByLogin';
 
 export interface IStateSchema {
-    loginByUsername: ILoginByUsernameSchema;
+    loginForm: IAuthByLoginSchema;
+}
+
+export interface IThunkExtraArg {
+    api: AxiosInstance;
+}
+
+export interface IThunkConfig<T> {
+    rejectValue: T;
+    extra: IThunkExtraArg;
+    state: IStateSchema;
 }

@@ -1,11 +1,11 @@
-import { LoginByUsernameForm } from '@/features/LoginByUsername';
+import { AuthByLoginForm } from '@/features/AuthByLogin';
 
 import s from './LoginPage.module.scss';
 
 const LoginPage = () => {
     return (
         <div className={s.container}>
-            <LoginByUsernameForm />
+            <AuthByLoginForm />
         </div>
     );
 };

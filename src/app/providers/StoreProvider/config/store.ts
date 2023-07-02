@@ -1,12 +1,12 @@
 import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
 
-import { loginByUsernameReducer } from '@/features/LoginByUsername';
+import { authByLoginReducer } from '@/features/AuthByLogin';
 
 import { IStateSchema } from './StateSchema';
 
 export const createReduxStore = (initialState?: IStateSchema) => {
     const rootReducer: ReducersMapObject<IStateSchema> = {
-        loginByUsername: loginByUsernameReducer,
+        loginForm: authByLoginReducer,
     };
 
     return configureStore<IStateSchema>({

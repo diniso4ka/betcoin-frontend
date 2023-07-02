@@ -4,23 +4,24 @@ import { useTranslation } from 'react-i18next';
 import { Button } from '@/shared/ui/Button';
 import { Input } from '@/shared/ui/Input';
 
-import { useLoginByUsernameFormProps } from '../../model/hooks/useLoginByUsernameFormProps';
+import { useAuthByLoginFormProps } from '../../model/hooks/useAuthByLoginFormProps';
 
-import s from './LoginByUsernameForm.module.scss';
+import s from './AuthByLoginForm.module.scss';
 
-const LoginByUsernameFormComponent = () => {
+const AuthByLoginFormComponent = () => {
     const { t } = useTranslation();
-    const { handleSetValue, loginValue, passwordValue } =
-        useLoginByUsernameFormProps();
+    const { handleSetValue, handleSubmit, loginValue, passwordValue, loading } =
+        useAuthByLoginFormProps();
 
     return (
-        <form className={s.container}>
+        <form onSubmit={handleSubmit} className={s.container}>
             <Input
                 onChange={handleSetValue}
                 name={'login'}
                 className={s.input}
                 placeholder={t('login_placeholder') as string}
                 value={loginValue}
+                disabled={loading}
             />
             <Input
                 onChange={handleSetValue}
@@ -29,12 +30,19 @@ const LoginByUsernameFormComponent = () => {
                 placeholder={t('password_placeholder') as string}
                 type='password'
                 value={passwordValue}
+                disabled={loading}
             />
-            <Button width={'WIDTH_RESPONSIVE'} size={'SIZE_L'}>
+            <Button
+                onClick={handleSubmit}
+                type='submit'
+                width={'WIDTH_RESPONSIVE'}
+                size={'SIZE_L'}
+                disabled={loading}
+            >
                 {t('submit')}
             </Button>
         </form>
     );
 };
 
-export const LoginByUsernameForm = memo(LoginByUsernameFormComponent);
+export const AuthByLoginForm = memo(AuthByLoginFormComponent);

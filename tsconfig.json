@@ -8,6 +8,7 @@
         "jsx": "react-jsx",
         "allowJs": true,
         "strict": true,
+        "useUnknownInCatchVariables": false,
         "moduleResolution": "node",
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
