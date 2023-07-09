@@ -1,8 +1,10 @@
 import { AxiosInstance } from 'axios';
 
+import { IUserSchema } from '@/entities/User';
 import { IAuthByLoginSchema } from '@/features/AuthByLogin';
 
 export interface IStateSchema {
+    user: IUserSchema;
     loginForm: IAuthByLoginSchema;
 }
 

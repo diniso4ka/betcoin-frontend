@@ -41,7 +41,9 @@ export const useAuthByLoginFormProps = (): {
         );
     }, [dispatch, loginValue, passwordValue]);
 
-    useMountEffect(noop, dispatch(authByLoginActions.setValue()));
+    useMountEffect(noop, () => {
+        dispatch(authByLoginActions.setValue());
+    });
 
     return {
         handleSetValue,

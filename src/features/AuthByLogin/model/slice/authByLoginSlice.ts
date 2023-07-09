@@ -6,7 +6,7 @@ import {
 } from '@reduxjs/toolkit';
 
 import { thunkAuthByLogin } from '../service/ThunkAuthByLogin';
-import { Fields, IAuthByLoginSchema, IForm, ISetValuePayload } from '../types';
+import { IAuthByLoginSchema, IForm, ISetValuePayload } from '../types';
 
 const initialState = {
     form: {
@@ -45,7 +45,7 @@ export const authByLoginSlice = createSlice({
             .addCase(thunkAuthByLogin.fulfilled, () => {
                 return initialState;
             })
-            .addCase(thunkAuthByLogin.rejected, (state, action) => {
+            .addCase(thunkAuthByLogin.rejected, (state) => {
                 state.loading = false;
             });
     },
