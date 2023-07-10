@@ -1,10 +1,11 @@
 import { IStateSchema } from '@/app/providers/StoreProvider';
 
-export const authByLoginFormLoginSelector = (state: IStateSchema) =>
+export const loginSelector = (state: IStateSchema) =>
     state.loginForm.form.login;
 
-export const authByLoginFormPasswordSelector = (state: IStateSchema) =>
+export const passwordSelector = (state: IStateSchema) =>
     state.loginForm.form.password;
 
-export const authByLoginFormStatusSelector = (state: IStateSchema) =>
-    state.loginForm.loading;
+export const statusSelector = (state: IStateSchema) => state.loginForm.loading;
+
+export const errorSelector = (state: IStateSchema) => state.loginForm?.error;

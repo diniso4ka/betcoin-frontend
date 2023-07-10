@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { ILoginResponse } from '@/shared/types/api/auth/login';
+import { ILoginResponse } from '@/shared/api/resources/auth/types';
 
 import { userDataAdapter } from '../service/userDataAdapter';
 import { IUserSchema } from '../types';

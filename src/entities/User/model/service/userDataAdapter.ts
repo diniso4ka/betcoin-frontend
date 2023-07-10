@@ -1,4 +1,4 @@
-import { ILoginResponse } from '@/shared/types/api/auth/login';
+import { ILoginResponse } from '@/shared/api/resources/auth/types';
 
 import { IUserData } from '../..';
 

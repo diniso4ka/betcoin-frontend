@@ -8,7 +8,7 @@ export interface IAuthByLoginSchema {
 
 export type Fields = keyof ILoginRequest;
 
-export type IForm = Record<Fields, string>;
+export type IForm = ILoginRequest;
 
 export interface ISetValuePayload {
     value: string;

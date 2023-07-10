@@ -6,46 +6,50 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { useMountEffect } from '@/shared/lib/hooks/useMountEffect';
 
 import {
+    emailSelector,
     errorSelector,
     loginSelector,
     passwordSelector,
     statusSelector,
-} from '../selectors/authByLoginFormSelector';
-import { thunkAuthByLogin } from '../service/ThunkAuthByLogin';
-import { authByLoginActions } from '../slice/authByLoginSlice';
+} from '../selectors/registerByEmailFormSelector';
+import { thunkRegisterByEmail } from '../service/ThunkRegisterByEmail';
+import { registerByEmailActions } from '../slice/registerByEmail';
 import { ISetValuePayload } from '../types';
 
-export const useAuthByLoginFormProps = (): {
+export const useRegisterByEmailFormProps = (): {
     handleSetValue: (data: ISetValuePayload) => void;
     handleSubmit: () => void;
     loginValue?: string;
+    emailValue?: string;
     passwordValue?: string;
     loading: boolean;
     error?: string;
 } => {
     const dispatch = useAppDispatch();
+    const emailValue = useSelector(emailSelector);
     const loginValue = useSelector(loginSelector);
     const passwordValue = useSelector(passwordSelector);
     const loading = useSelector(statusSelector);
     const error = useSelector(errorSelector);
     const handleSetValue = useCallback(
         (data: ISetValuePayload) => {
-            dispatch(authByLoginActions.setValue(data));
+            dispatch(registerByEmailActions.setValue(data));
         },
         [dispatch],
     );
 
     const handleSubmit = useCallback(() => {
         dispatch(
-            thunkAuthByLogin({
+            thunkRegisterByEmail({
+                email: emailValue,
                 login: loginValue,
                 password: passwordValue,
             }),
         );
-    }, [dispatch, loginValue, passwordValue]);
+    }, [dispatch, emailValue, loginValue, passwordValue]);
 
     useMountEffect(noop, () => {
-        dispatch(authByLoginActions.setValue());
+        dispatch(registerByEmailActions.setValue());
     });
 
     return {
