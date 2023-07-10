@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { getRouteMain } from '@/shared/const/router';
+import { MAIN_ROUTE } from '@/shared/const/router';
 import { AppLink } from '@/shared/ui/AppLink';
 
 import { INavbarItem } from './types';
@@ -17,9 +17,9 @@ const NavbarComponent = ({ className }: INavbarProps) => {
 
     // TODO with reselect (auth/no-auth)
     const navbarList: INavbarItem[] = [
-        { title: t('Main'), to: getRouteMain() },
-        { title: t('Blog'), to: getRouteMain() },
-        { title: t('Live bets'), to: getRouteMain() },
+        { title: t('Main'), to: MAIN_ROUTE },
+        { title: t('Blog'), to: MAIN_ROUTE },
+        { title: t('Live bets'), to: MAIN_ROUTE },
     ];
 
     return (

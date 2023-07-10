@@ -18,7 +18,7 @@ export default (env: IBuildEnv) => {
 
     const mode = env.mode || 'development';
     const PORT = env.port || 3000;
-    const apiUrl = env.apiUrl || 'http://localhost:8000';
+    const apiUrl = env.apiUrl || 'http://localhost:5000/api';
 
     const isDev = mode === 'development';
 
